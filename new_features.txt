@@ -1,0 +1,3 @@
+Feature #1: Add Priority
+Feature #2: List items sorted by created date or priority
+Feature #3: Save list to file
