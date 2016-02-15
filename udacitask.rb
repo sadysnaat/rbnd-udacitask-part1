@@ -11,6 +11,8 @@ list.add_item("Coffee","MEDIUM")
 
 # Print the list
 list.print_list()
+list.print_list("date") #sort by created
+list.print_list("priority") #sort by priority
 
 # Delete the first item
 list.delete_item(1)

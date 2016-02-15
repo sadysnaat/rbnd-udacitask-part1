@@ -23,22 +23,32 @@ class TodoList
       @items[item_no-1].toggle!
     end
 
-    def print_list()
-      puts "*"*10
+    def print_list(sort="description")
+      puts "*"*@title.length
       puts @title
-      puts "*"*10
+      puts "*"*@title.length
 
       sorted_array = @items
-      sorted_array.sort! { |a,b| a.description <=> b.description }
+      case sort
+      when "description"
+        sorted_array.sort! { |a,b| a.description <=> b.description }
+      when "date"
+        sorted_array.sort! { |a,b| (a.created_on == b.created_on) ? a.description <=> b.description : a.created_on <=> b.created_on }
+      when "priority"
+        sorted_array.sort! { |a,b| (a.priority == b.priority) ? a.description <=> b.description : a.priority <=> b.priority }
+      end
 
-      sorted_array.each_index { |index|  puts "#{index+1} #{@items[index].description} #{@items[index].completed?} #{@items[index].priority}"  }
+      sorted_array.each_index do |index|
+        status = @items[index].completed? ? "\u{2611}" : "\u{2610}"
+        puts "#{index+1}\t#{@items[index].description}\t#{status}\t#{@items[index].priority}".encode("utf-8")
+      end
 
       puts "\n"*2
     end
 end
 
 class Item
-    attr_reader :description, :priority
+    attr_reader :description, :priority, :created_on
     # methods and stuff go here
     @@priorities = {LOW: 3,MEDIUM: 2, HIGH: 1}
     def initialize(description,priority)
