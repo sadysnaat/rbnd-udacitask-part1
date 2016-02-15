@@ -4,10 +4,10 @@ require_relative 'todolist.rb'
 list = TodoList.new("Buy Grocery")
 
 # Add four new items
-list.add_item("Milk")
-list.add_item("Sugar")
-list.add_item("Tea")
-list.add_item("Coffee")
+list.add_item("Milk","HIGH")
+list.add_item("Sugar","LOW")
+list.add_item("Tea","MEDIUM")
+list.add_item("Coffee","MEDIUM")
 
 # Print the list
 list.print_list()
