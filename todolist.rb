@@ -1,3 +1,5 @@
+require "yaml"
+
 class TodoList
     attr_reader :title, :items
     # methods and stuff go here
@@ -28,6 +30,7 @@ class TodoList
       puts @title
       puts "*"*@title.length
 
+      puts "\nNo.\tItem\tStatus\tPriority"
       sorted_array = @items
       case sort
       when "description"
@@ -44,6 +47,14 @@ class TodoList
       end
 
       puts "\n"*2
+    end
+
+    def save_to_file(file_name)
+      File.open(file_name,'w') { |file_handler| file_handler.write(YAML.dump(self)) }
+    end
+
+    def self.initialize_from_file(file_name)
+      YAML.load_file(file_name)
     end
 end
 
