@@ -26,11 +26,15 @@ class TodoList
     end
 
     def print_list(sort="description")
+      #Basic formatiing
       puts "*"*@title.length
       puts @title
       puts "*"*@title.length
 
-      puts "\nNo.\tItem\tStatus\tPriority"
+      #print header
+      puts "\nNo.\tItem\tStatus\tPriority\tDate Created"
+
+      #sort on basis of parameter
       sorted_array = @items
       case sort
       when "description"
@@ -42,8 +46,8 @@ class TodoList
       end
 
       sorted_array.each_index do |index|
-        status = @items[index].completed? ? "\u{2611}" : "\u{2610}"
-        puts "#{index+1}\t#{@items[index].description}\t#{status}\t#{@items[index].priority}".encode("utf-8")
+        status = @items[index].completed? ? "\u{2611}" : "\u{2610}" #☐ for incomplete and  ☑ for completed items
+        puts "#{index+1}\t#{@items[index].description}\t#{status}\t#{@items[index].priority}\t\t#{@items[index].created_on.strftime("%Y/%m/%d")}".encode("utf-8")
       end
 
       puts "\n"*2
@@ -62,6 +66,7 @@ class Item
     attr_reader :description, :priority, :created_on
     # methods and stuff go here
     @@priorities = {LOW: 3,MEDIUM: 2, HIGH: 1}
+    #Learnt new thing class variables
     def initialize(description,priority)
       @description = description
       @completion_status = false

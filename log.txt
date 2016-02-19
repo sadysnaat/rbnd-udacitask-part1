@@ -1,0 +1,53 @@
+commit 417a82bb11e7baa679f1045ceca36a1f8d615816
+Author: Deepak Sharma <sadysnaat@gmail.com>
+Date:   Tue Feb 16 01:34:57 2016 +0530
+
+    Added Feature 3: save and read list from file
+
+commit 3f8854183e83cb3bd0427fa9cbb59746760727ad
+Author: Deepak Sharma <sadysnaat@gmail.com>
+Date:   Tue Feb 16 00:51:27 2016 +0530
+
+    Add Feature 2: sort by date_created,priority
+
+commit 0f86f81bdb759d2864972ec25af16f9a4a05c611
+Author: Deepak Sharma <sadysnaat@gmail.com>
+Date:   Mon Feb 15 22:20:36 2016 +0530
+
+    Add Feature 1: priority in todo item
+
+commit 0a3bd559fa0f6f7e13f62b033fcdaa3e10c37ada
+Author: Deepak Sharma <sadysnaat@gmail.com>
+Date:   Thu Feb 11 13:20:02 2016 +0530
+
+    Completed udacitask instructions
+
+commit 7b114996fc446b5d2efafe2e057413322610ca8e
+Author: Deepak Sharma <sadysnaat@gmail.com>
+Date:   Thu Feb 11 01:04:21 2016 +0530
+
+    Implemented Basic Todo List
+
+commit d2710f6e3809841c2a5004fae70bbb1b72423eb8
+Author: Deepak Sharma <sadysnaat@gmail.com>
+Date:   Mon Feb 8 02:03:48 2016 +0530
+
+    Remove starter from ruby files
+
+commit 5822a0726ac9b9cb6471035dfffda2c6863a2592
+Author: Julia Van Cleve <julia@jmv.me>
+Date:   Thu Jan 7 10:44:49 2016 -0800
+
+    Use require_relative
+
+commit e88eb7e27850576cc26029d71194c9fa354862a8
+Author: Walter Latimer <walter@walterlatimer.com>
+Date:   Tue Dec 22 02:49:31 2015 -0500
+
+    Update README
+
+commit d86b0c12543179f236c1c68dfb4a9b1a0a0a4972
+Author: Julia Van Cleve <julia@jmv.me>
+Date:   Tue Dec 22 00:05:49 2015 -0500
+
+    Initial Commit
